@@ -1,0 +1,17 @@
+﻿<div ng-controller="ListController">
+    <table>
+        <tr ng-repeat="filme in filmes">
+            <td>{{filme.Titulo}}</td>
+            <td>
+                <a href="#/details/{{filme.Id}}">Detalhes</a>
+
+                <button type="button" ng-click="delete(filme)">
+                    Excluir
+                </button>
+            </td>
+        </tr>
+    </table>
+    <button class="btn btn-default" ng-click="create()">Create</button>
+    <div ng-include="'/Cliente/Views/edit.html'">
+    </div>
+</div>
